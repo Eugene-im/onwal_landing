@@ -1,0 +1,265 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+.TechSection-container {
+  position: relative;
+  background: #fff;
+  color: $blue400;
+  padding: 20px 0 0;
+  z-index: 2;
+}
+
+/* 1920 - SVG width, 90 - SVG height*/
+$backgroundHeight: calc(100vw / 1920 * 90);
+
+.Background {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.Background.top {
+  height: $backgroundHeight;
+  top: 0;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  background-color: #e6e1ff;
+}
+
+.Background.bottom {
+  height: $backgroundHeight;
+  bottom: 0;
+  clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+  background-color: #e6e8ff;
+}
+
+// TODO: Rework
+section#ContactUs::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  height: 10px;
+  background-color: #e6e8ff;
+  z-index: 3;
+}
+
+.TechSection-content {
+  margin-bottom: 209px;
+  margin-top: 132px;
+  .sectionTitle{
+    color: #1d1040;
+  }
+}
+
+.TechSection-content h1 {
+  margin-bottom: 54px;
+}
+
+.TechSection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 71px 32px;
+}
+
+.TechSection-item {
+  display: flex;
+  flex-flow: row nowrap;
+  // margin-top: 37px;
+}
+
+.TechSection-image {
+  flex: 0 0 80px;
+  height: 80px;
+  margin-right: 27px;
+}
+
+.TechSection-text h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.TechSection-text p {
+  margin: 10px 0 20px 0;
+  font-size: 15px;
+}
+
+.TechSection-text a {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #5a5dff;
+  text-transform: uppercase;
+}
+
+.TechSection-learnmore {
+  display: inline-block;
+  position: relative;
+  padding-right: 28px;
+  text-transform: uppercase;
+}
+
+.TechSection-learnmore::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  content: '';
+  width: 18px;
+  height: 12px;
+  @include setBackgroundImage('../../assets/right-arrow.svg');
+}
+
+.TechSection-item .first {
+  @include setBackgroundImage('../../assets/Group-first-tech_t.svg', contain);
+}
+
+.TechSection-item .second {
+  @include setBackgroundImage('../../assets/Group-second-tech_t.svg', contain);
+}
+
+.TechSection-item .third {
+  @include setBackgroundImage('../../assets/Group-third-tech_t.svg', contain);
+}
+
+.TechSection-item .fourth {
+  @include setBackgroundImage('../../assets/Group-fourth-tech_t.svg', contain);
+}
+
+.TechSection-item .fifth {
+  @include setBackgroundImage('../../assets/Group-fifth-tech_t.svg', contain);
+}
+
+.TechSection-item .sixth {
+  @include setBackgroundImage('../../assets/Group-sixth-tech_t.svg', contain);
+}
+
+.TechSection-content .mobile-link {
+  display: none;
+}
+
+@media screen and (max-width: 1240px) {
+  .TechSection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .TechSection-content {
+    margin-top: 63px;
+    margin-bottom: 63px;
+  }
+
+  .TechSection-grid {
+    grid-gap: 48px;
+  }
+
+  .TechSection-content h1 {
+    margin-bottom: 48px;
+  }
+
+  .TechSection-item h2 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .TechSection-item p,
+  .TechSection-learnmore {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 15px 0 15px 0;
+  }
+
+  .TechSection-image {
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .TechSection-content {
+    margin-top: 48px;
+    margin-bottom: 36px;
+  }
+
+  .TechSection-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+
+  .TechSection-item {
+    position: relative;
+    margin-top: 0;
+  }
+
+  .TechSection-item .mobile-link {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .TechSection-content h1 {
+    margin-bottom: 32px;
+    color: #1d1040;
+  }
+
+  .TechSection-text {
+    width: 100%;
+  }
+
+  .TechSection-text h2 {
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .TechSection-text p {
+    margin-right: 48px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+
+  .TechSection-learnmore {
+    display: none;
+  }
+
+  .TechSection-text h2::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 18px;
+    height: 12px;
+    @include setBackgroundImage('../../assets/right-arrow.svg');
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .TechSection-image {
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  .sectionTitle {
+    color: #1d1040;
+    margin-bottom: 0;
+  }
+}

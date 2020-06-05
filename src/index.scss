@@ -1,0 +1,89 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+
+$pathDomain: 'https://ntcdn.azureedge.net/';
+
+@import 'fonts';
+html{
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 24px;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+p,
+body,
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: #1d1040;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  line-height: 24px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  line-height: 24px;
+}
+
+button {
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.body__noscroll {
+  overflow: hidden;
+}

@@ -1,0 +1,48 @@
+.termin {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.wrap_ol {
+    ol {
+        list-style-type: none;
+        counter-reset: item;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: table;
+        counter-increment: item;
+        margin-bottom: 0.6em;
+    }
+
+    li:before {
+        content: counters(item, ".") ". ";
+        display: table-cell;
+        padding-right: 0.6em;
+    }
+
+    li li {
+        margin: 0;
+    }
+}
+.text_punct {
+    font-weight: 700;
+}
+.root_ol > li:before {
+    font-weight: 700;
+}
+
+// ol.alpha{
+//     list-style-type: lower-alpha;
+// }
+// .alpha li {
+//     display: table;
+//     margin-bottom: 0.6em;
+// }
+
+// .alpha li:before {
+//     content: ")";
+//     display: table-cell;
+//     padding-right: 0.6em;
+// }

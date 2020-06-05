@@ -1,0 +1,46 @@
+@import 'shared/styles/mixins.scss';
+
+.popup-info_body {
+  position: fixed;
+  width: 396px;
+  height: 294px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 6px 12px #1d104040;
+  border-radius: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: calc(50% - 198px);
+}
+
+.popup-info-true {
+  display: flex;
+}
+
+.popup-info-false {
+  display: none;
+}
+
+.popup-info-icon-true {
+  width: 86px;
+  height: 86px;
+  @include setBackgroundImage('../../assets/popup-info-true.svg');
+}
+
+.popup-info-icon-false {
+  width: 86px;
+  height: 86px;
+  @include setBackgroundImage('../../assets/popup-info-false.svg');
+}
+
+.popup-info-title {
+  margin-top: 32px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.popup-info-text {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 24px;
+}

@@ -1,0 +1,108 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+.SpecificationTitle {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 26px;
+}
+
+.SpecificationSubTitle {
+  font-size: 18px;
+  line-height: 36px;
+  padding-top: 24px;
+  // border-top: 1px solid rgba(90, 93, 255, 0.15);
+  margin: 0;
+}
+
+.SpecificationBlock {
+  margin-bottom: 26px;
+}
+
+.SpecificationLine {
+  display: flex;
+}
+
+.SpecificationLine:nth-child(odd) {
+  background: #e5e8ff;
+}
+
+.SpecificationBlock .left,
+.SpecificationBlock .right {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.SpecificationBlock .left {
+  flex: 1 1 50%;
+  margin-right: 32px;
+  padding: 0 0 0 8px;
+}
+
+.SpecificationBlock .right {
+  flex: 1 1 50%;
+}
+
+.SpecificationBlock .check-arrow {
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  @include setBackgroundImage('../../assets/check.svg', contain);
+}
+
+@media screen and (max-width: $tablet) {
+  .SpecificationTitle {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+  .SpecificationBlock {
+    margin-bottom: 20px;
+  }
+  .SpecificationBlock .left {
+    margin-right: 24px;
+  }
+  .SpecificationBlock .left,
+  .SpecificationBlock .right {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .SpecificationTitle {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 18px;
+  }
+  .SpecificationBlock {
+    margin-bottom: 18px;
+  }
+  .SpecificationBlock .left {
+    flex: 1 1 70%;
+    margin-right: 16px;
+  }
+  .SpecificationSubTitle {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .SpecificationBlock .left,
+  .SpecificationBlock .right {
+    font-size: 12px;
+  }
+}

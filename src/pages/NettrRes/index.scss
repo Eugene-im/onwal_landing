@@ -1,0 +1,1212 @@
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+$content-wight: 1252px;
+
+// .blackFontBoldTitle {
+//   font-size: 36px;
+//   line-height: 49px;
+//   font-weight: 700;
+// }
+
+// .hide {
+//   display: none;
+// }
+
+// .NSSDK {
+//   background-color: #1d1040;
+// }
+
+// .NSSDK-header {
+//   display: flex;
+//   min-height: 714px;
+//   width: 100%;
+//   //background: #1d1040 0% 0% no-repeat padding-box;
+//   @include setBackgroundImage("../../assets/nssdk_bg.png");
+//   justify-content: center;
+//   align-items: flex-end;
+//   // margin-top: 54px;
+//   position: relative;
+// }
+
+// .NSSDK-header__body {
+//   display: block;
+//   min-height: 704px;
+//   width: 100%;
+//   max-width: $content-wight;
+//   //background: #1d1040 0% 0% no-repeat padding-box;
+//   padding-top: 123px;
+// }
+
+// .NSSDK-header__left-right {
+//   position: absolute;
+//   max-width: 1286px;
+//   width: 100%;
+//   height: 789px;
+//   @include setBackgroundImage("../../assets/head_separate.png");
+//   background-position: 0px 0px;
+//   background-size: 1286px 789px;
+//   margin-top: -71px;
+//   z-index: 1;
+//   pointer-events: none;
+// }
+
+// .NSSDK-header__left {
+//   position: absolute;
+//   max-width: 554px;
+//   text-align: left;
+//   font-size: 24px;
+//   line-height: 36px;
+//   font-weight: 300;
+//   letter-spacing: 0;
+//   color: #ffffff;
+//   opacity: 1;
+//   z-index: 0;
+// }
+
+// .NSSDK-header__buttom-triangle {
+//   width: 0;
+//   height: 0;
+//   border-left: 5px solid transparent;
+//   border-right: 5px solid transparent;
+//   border-bottom: 5px solid black;
+// }
+
+// .NSSDK-header__left-title {
+//   text-align: left;
+//   font-size: 56px;
+//   line-height: 76px;
+//   font-weight: 700;
+//   letter-spacing: 0;
+//   color: #ffffff;
+//   text-transform: uppercase;
+// }
+
+// .NSSDK-header__left-text {
+//   text-align: left;
+//   font-size: 24px;
+//   line-height: 36px;
+//   font-weight: 300;
+//   line-height: 36px;
+//   letter-spacing: 0;
+//   color: #ffffff;
+//   opacity: 0.65;
+// }
+
+// .NSSDK-ST {
+//   display: flex;
+//   width: 100%;
+//   flex-direction: column;
+//   background: #e5e8ff 0% 0% no-repeat padding-box;
+//   align-items: center;
+// }
+
+// .NSSDK-ST__body {
+//   width: 100%;
+//   max-width: $content-wight;
+//   // height: 609px;
+//   min-height: 609px;
+// }
+
+// .NSSDK-ST__title {
+//   text-align: center;
+//   @extend .blackFontBoldTitle;
+//   letter-spacing: 0;
+//   color: #1d1040;
+//   width: 100%;
+//   max-width: $content-wight;
+// }
+
+// .NSSDK-ST__row-decoration {
+//   position: relative;
+//   width: 100%;
+//   max-width: $content-wight;
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 72px;
+//   z-index: 2;
+// }
+
+// .NSSDK-ST__row-decoration-rainbow {
+//   width: 428px;
+//   height: 36px;
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-rainbow.svg");
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+// }
+
+// .NSSDK-ST__row-decoration-rainbow:before {
+//   content: " ";
+//   display: block;
+//   width: 12px;
+//   height: 12px;
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-ellipse.svg");
+//   margin-left: -6px;
+//   margin-bottom: -5px;
+// }
+
+// .NSSDK-ST__row-decoration-rainbow:after {
+//   content: " ";
+//   display: block;
+//   width: 12px;
+//   height: 12px;
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-ellipse.svg");
+//   margin-right: -6px;
+//   margin-bottom: -5px;
+// }
+
+// .NSSDK-ST__row {
+//   display: flex;
+//   width: 100%;
+//   max-width: $content-wight;
+//   flex-direction: row;
+//   justify-content: center;
+//   z-index: 1;
+//   position: relative;
+//   align-items: flex-start;
+//   align-content: flex-start;
+// }
+
+// .NSSDK-ST_row-card {
+//   display: flex;
+//   position: relative;
+//   width: 348px;
+//   text-align: left;
+//   font-size: 15px;
+//   line-height: 24px;
+//   color: #1d1040;
+//   background: #ffffff 0% 0% no-repeat padding-box;
+//   box-shadow: 0px 6px 12px #5463ff26;
+//   border-radius: 6px;
+//   padding: 24px;
+//   margin-right: 32px;
+//   line-height: 24px;
+// }
+
+// .NSSDK-ST_row-card:before {
+//   content: "";
+//   display: block;
+//   width: calc(100% - 32px);
+//   position: absolute;
+//   z-index: -1;
+//   height: calc(100% + 32px);
+//   background: #5a5dff 0% 0% no-repeat padding-box;
+//   border-radius: 6px;
+//   opacity: 0.15;
+//   margin-left: -8px;
+//   margin-top: -40px;
+// }
+
+// .NSSDK-ST_row-card:last-child {
+//   margin-right: initial;
+// }
+
+// .NSSDK-REASONS {
+//   display: flex;
+//   width: 100%;
+//   background-color: #fff;
+//   justify-content: center;
+// }
+
+// .NSSDK-REASONS__title {
+//   width: 100%;
+//   text-align: center;
+//   @extend .blackFontBoldTitle;
+//   letter-spacing: 0;
+//   color: #1d1040;
+//   margin-top: 137px;
+//   // margin-top: 187px;
+// }
+
+// .NSSDK-REASONS__row {
+//   width: 100%;
+//   max-width: $content-wight;
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+// }
+
+// .NSSDK-REASONS__card {
+//   display: flex;
+//   max-width: 396px;
+//   width: 100%;
+//   margin-top: 99px;
+//   // margin-right: 32px;
+// }
+
+// // .NSSDK-REASONS__card:nth-child(3n) {
+// //   margin-right: initial;
+// // }
+
+// .NSSDK-REASONS__card-img {
+//   display: block;
+//   width: 80px;
+//   height: 80px;
+//   flex: 1 0 80px;
+// }
+
+// .NSSDK-REASONS__card:nth-child(1) .NSSDK-REASONS__card-img {
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-reasons-img1.svg");
+// }
+
+// .NSSDK-REASONS__card:nth-child(2) .NSSDK-REASONS__card-img {
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-reasons-img2.svg");
+// }
+
+// .NSSDK-REASONS__card:nth-child(3) .NSSDK-REASONS__card-img {
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-reasons-img3.svg");
+// }
+
+// .NSSDK-REASONS__card:nth-child(4) .NSSDK-REASONS__card-img {
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-reasons-img4.svg");
+// }
+
+// .NSSDK-REASONS__card:nth-child(5) .NSSDK-REASONS__card-img {
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-reasons-img5.svg");
+// }
+// .NSSDK-REASONS__card:nth-child(6) .NSSDK-REASONS__card-img {
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-reasons-img1.svg");
+// }
+
+// .NSSDK-REASONS__card-contetn {
+//   margin-left: 27px;
+// }
+
+// .NSSDK-REASONS__card-title {
+//   font-size: 24px;
+//   line-height: 36px;
+//   font-weight: 700;
+//   letter-spacing: 0;
+//   color: #1d1040;
+// }
+
+// .NSSDK-REASONS__card-text {
+//   font-size: 15px;
+//   line-height: 22px;
+//   letter-spacing: 0;
+//   color: #1d1040;
+//   margin-top: 14px;
+//   line-height: 24px;
+// }
+
+// .NSSDK-header::after {
+//   background-color: #e5e8ff;
+//   position: absolute;
+//   height: calc(100vw / 1920 * 90);
+//   width: 100%;
+//   clip-path: polygon(50% 0, 100% 85%, 100% 100%, 50% 100%, 0 100%, 0 85%);
+//   z-index: 2;
+//   display: block;
+//   content: "";
+//   left: 0;
+//   bottom: -2px;
+// }
+
+// .NSSDK-E .arrow_down {
+//   position: absolute;
+//   height: calc(100vw / 1920 * 90);
+//   width: 100%;
+//   background-color: #fff;
+//   transform: scaleY(-1);
+//   clip-path: polygon(0 100%, 50% 0, 100% 100%);
+// }
+
+// .arrow_down-blue {
+//   position: absolute;
+//   height: calc(100vw / 1920 * 90);
+//   width: 100%;
+//   background-color: #1d1040;
+//   transform: scaleY(-1);
+//   clip-path: polygon(0 100%, 50% 0, 100% 100%);
+// }
+
+// .NSSDK-REASONS__body,
+// .NSSDK-ST__body,
+// .NSSDK-E__body,
+// .NSSDK-Benefits__body {
+//   position: relative;
+//   z-index: 3;
+// }
+
+// .NSSDK-ST,
+// .NSSDK-REASONS,
+// .NSSDK-E,
+// .NSSDK-Benefits {
+//   position: relative;
+// }
+// .NSSDK-REASONS::after,
+// .NSSDK-ST::after,
+// .NSSDK-E::after,
+// .NSSDK-Benefits::after {
+//   background-color: #e5e8ff;
+//   position: absolute;
+//   height: calc(100vw / 1920 * 90);
+//   width: 100%;
+//   clip-path: polygon(50% 0, 100% 85%, 100% 100%, 50% 100%, 0 100%, 0 85%);
+//   display: block;
+//   content: "";
+//   left: 0;
+//   bottom: calc(-100vw / 1920 * 90 + 3px);
+//   transform: rotate(180deg);
+//   z-index: 2;
+// }
+// .NSSDK-REASONS::after {
+//   background-color: #ffffff;
+// }
+
+// .NSSDK-E::after {
+//   background-color: #1d1040;
+// }
+
+// .NSSDK-E {
+//   height: 2061px;
+//   background: #1d1040 0% 0% no-repeat padding-box;
+//   display: flex;
+//   justify-content: center;
+// }
+
+// .NSSDK-E__body {
+//   width: 100%;
+//   max-width: $content-wight;
+// }
+
+// .NSSDK-E__title {
+//   text-align: center;
+//   @extend .blackFontBoldTitle;
+//   letter-spacing: 0;
+//   color: #ffffff;
+//   margin-top: 145px;
+// }
+
+// .NSSDK-E__content {
+//   position: relative;
+//   margin-top: 61px;
+//   z-index: 2;
+// }
+
+// .NSSDK-E__content-dec {
+//   position: absolute;
+//   display: flex;
+//   width: 100%;
+//   max-width: $content-wight;
+//   margin-top: 202px;
+//   z-index: 1;
+//   justify-content: space-between;
+//   flex-direction: row-reverse;
+// }
+
+// .NSSDK-E__content-dec:after {
+//   content: "";
+//   display: block;
+//   width: 75px;
+//   height: 1418px;
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-environmental-left-dec.svg");
+//   margin-left: 5%;
+// }
+
+// .NSSDK-E__content-dec:before {
+//   content: "";
+//   display: block;
+//   width: 75px;
+//   height: 1418px;
+//   @include setBackgroundImage("../../assets/netter-streaming-sdk-environmental-right-dec.svg");
+//   margin-right: 5%;
+// }
+
+// .NSSDK-E__row {
+//   display: flex;
+//   align-items: center;
+//   margin-top: 48px;
+// }
+
+// .NSSDK-E__row:nth-child(odd) {
+//   flex-direction: row-reverse;
+// }
+
+// .NSSDK-E__row-img {
+//   width: 610px;
+//   height: 305px;
+//   border-radius: 6px;
+// }
+
+// .NSSDK-E__row-img {
+//   border-right: 2px solid #fff;
+// }
+
+// .NSSDK-E__row:nth-child(odd) .NSSDK-E__row-img {
+//   border-left: 2px solid #fff;
+//   border-right: initial;
+// }
+
+// .NSSDK-E__row:nth-child(1) .NSSDK-E__row-img {
+//   @include setBackgroundImage("../../assets/netr_sdk_01.jpg");
+// }
+
+// .NSSDK-E__row:nth-child(2) .NSSDK-E__row-img {
+//   @include setBackgroundImage("../../assets/netr_sdk_02.jpg");
+// }
+
+// .NSSDK-E__row:nth-child(3) .NSSDK-E__row-img {
+//   @include setBackgroundImage("../../assets/netr_sdk_03.jpg");
+// }
+
+// .NSSDK-E__row:nth-child(4) .NSSDK-E__row-img {
+//   @include setBackgroundImage("../../assets/netr_sdk_04.jpg");
+// }
+
+// .NSSDK-E__row:nth-child(5) .NSSDK-E__row-img {
+//   @include setBackgroundImage("../../assets/netr_sdk_05.jpg");
+// }
+
+// .NSSDK-E__row-info {
+//   width: 396px;
+//   margin-left: 32px;
+//   margin-right: 32px;
+// }
+
+// .NSSDK-E__row-title {
+//   text-align: left;
+//   font-size: 24px;
+//   line-height: 36px;
+//   font-weight: 700;
+//   letter-spacing: 0;
+//   color: #ffffff;
+// }
+
+// .NSSDK-E__row-text {
+//   text-align: left;
+//   font-size: 15px;
+//   line-height: 24px;
+//   letter-spacing: 0;
+//   color: #ffffff;
+//   opacity: 0.65;
+//   line-height: 24px;
+// }
+
+// .NSSDK-Benefits {
+//   display: flex;
+//   justify-content: center;
+//   padding-top: 170px;
+//   padding-bottom: 120px;
+//   background: #e5e8ff 0% 0% no-repeat padding-box;
+// }
+
+// .NSSDK-Benefits__body {
+//   width: 100%;
+//   max-width: $content-wight;
+// }
+
+// .NSSDK-Benefits__title {
+//   text-align: center;
+//   @extend .blackFontBoldTitle;
+//   letter-spacing: 0;
+//   color: #1d1040;
+// }
+
+// .NSSDK-Benefits__content {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: 66px;
+// }
+
+// .NSSDK-Benefits__card {
+//   display: flex;
+//   margin-right: 32px;
+//   flex: 1 1 30%;
+// }
+
+// .NSSDK-Benefits__card:last-child {
+//   margin-right: initial;
+// }
+
+// .NSSDK-Benefits__card-index {
+//   font-size: 120px;
+//   line-height: 36px;
+//   letter-spacing: 0px;
+//   color: #ffffff;
+//   text-shadow: 0px 6px 16px #5463ff4d;
+//   opacity: 1;
+//   font-weight: 700;
+//   margin-top: 32px;
+//   position: relative;
+// }
+
+// .NSSDK-Benefits__card-index:after {
+//   content: "";
+//   display: block;
+//   width: 8px;
+//   height: 72px;
+//   @include setBackgroundImage("../../assets/five_dots.svg");
+//   position: absolute;
+//   left: calc(50% - 8px);
+//   top: 83px;
+// }
+
+// .NSSDK-Benefits__card-info {
+//   margin-left: 32px;
+// }
+
+// .NSSDK-Benefits__card-title {
+//   font-size: 24px;
+//   line-height: 36px;
+//   font-weight: 700;
+//   letter-spacing: 0;
+//   color: #1d1040;
+// }
+
+// .NSSDK-Benefits__card-text {
+//   font-size: 15px;
+//   line-height: 24px;
+//   letter-spacing: 0;
+//   color: #1d1040;
+//   margin-top: 12px;
+// }
+
+// .NSSDK-Specification {
+//   display: flex;
+//   justify-content: center;
+//   background-color: #fff;
+// }
+
+// .NSSDK-Specification__content-left .NSSDK-Specification:nth-child(1) {
+//   border-top: initial;
+// }
+
+// .NSSDK-Specification__content-right .NSSDK-Specification:nth-child(1) {
+//   border-top: initial;
+// }
+
+// .NSSDK-Specification .SpecificationLine .left,
+// .SpecificationBlock .left {
+//   padding-left: 10px;
+//   font-size: 15px;
+//   line-height: 32px;
+// }
+
+// .NSSDK-Specification .SpecificationLine .right,
+// .SpecificationBlock .right {
+//   padding-left: 10px;
+//   font-size: 15px;
+//   line-height: 32px;
+//   font-weight: 600;
+//   line-height: 32px;
+//   color: #1d1040;
+// }
+
+// .NSSDK-Specification__body {
+//   width: 100%;
+//   max-width: $content-wight;
+// }
+
+// .NSSDK-Specification__title {
+//   text-align: center;
+//   @extend .blackFontBoldTitle;
+//   letter-spacing: 0;
+//   color: #1d1040;
+//   margin-top: 90px;
+// }
+
+// .NSSDK-Specification__content {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-top: 26px;
+//   justify-content: space-between;
+//   width: 100%;
+//   max-width: $content-wight;
+// }
+
+// .NSSDK-Specification__content-left {
+//   flex: 0 1 49%;
+// }
+
+// .NSSDK-Specification__content-right {
+//   flex: 0 1 49%;
+// }
+// .NSSDK-header .TechWrapperBackLink {
+//   display: block;
+//   left: initial;
+//   top: -40px;
+// }
+
+// .hide-transition {
+//   top: -100px;
+//   transition: top 0.3s;
+// }
+
+// .NSSDK-RequestTrial-submit {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   padding-bottom: 66px;
+//   background-color: #fff;
+//   position: relative;
+//   z-index: 9;
+//   padding-top: 15px;
+//   position: relative;
+//   top: -1px;
+// }
+
+// .NSSDK-RequestTrial-submit a {
+//   max-width: 396px;
+//   width: 100%;
+//   padding: 12px 14px;
+// }
+
+// @media screen and (max-width: $tablet) {
+//   .NSSDK-ST__row-decoration {
+//     margin-top: 44px;
+//   }
+//   .NSSDK-header .TechWrapperBackLink {
+//     display: none;
+//   }
+//   .NSSDK-E__content-dec:after {
+//     margin-left: 1%;
+//   }
+
+//   .NSSDK-E__content-dec:before {
+//     margin-right: 4%;
+//   }
+//   .NSSDK-header__left-right {
+//     height: 647px;
+//   }
+//   .NSSDK-header__body,
+//   .NSSDK-ST__body,
+//   .NSSDK-ST__body,
+//   .NSSDK-REASONS__body,
+//   .NSSDK-REASONS__body,
+//   .NSSDK-E__body,
+//   .NSSDK-E__body,
+//   .NSSDK-Benefits__body,
+//   .NSSDK-Benefits__body,
+//   .NSSDK-Specification__body {
+//     padding-right: 24px;
+//     padding-left: 24px;
+//     box-sizing: border-box;
+//   }
+//   .NSSDK-Benefits__content {
+//     flex-direction: column;
+//   }
+//   .NSSDK-Benefits__card-index:after {
+//     display: none;
+//   }
+//   .NSSDK-Benefits__card-index {
+//     font-size: 80px;
+//     line-height: 36px;
+//   }
+//   .NSSDK-Benefits__card {
+//     margin-bottom: 10px;
+//   }
+//   .NSSDK-Specification__content {
+//     display: flex;
+//     margin-top: initial;
+//     flex-direction: column;
+//   }
+
+//   .NSSDK-Specification__content-left {
+//     width: 100%;
+//     margin-top: 32px;
+//   }
+
+//   .NSSDK-Specification__content-right {
+//     width: 100%;
+//     margin-left: initial;
+//   }
+//   .NSSDK-REASONS__card {
+//     max-width: 348px;
+//   }
+//   .NSSDK-RequestTrial-submit {
+//     padding: 55px 0 50px;
+//   }
+//   .NSSDK-header__left-right {
+//     background-size: contain;
+//   }
+//   .NSSDK-header__body {
+//     display: flex;
+//     flex-direction: column-reverse;
+//     min-height: 780px;
+//     padding-top: initial;
+//     margin-bottom: 40px;
+//     width: 100%;
+//     padding-bottom: 34px;
+//   }
+//   .NSSDK-header__left {
+//     max-width: unset;
+//   }
+//   .NSSDK-header__left .NSSDK-header__left-title {
+//     text-align: center;
+//     font-size: 48px;
+//     line-height: 65px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #ffffff;
+//     text-transform: uppercase;
+//     margin-top: 58px;
+//   }
+//   .NSSDK-REASONS__title {
+//     margin-top: 84px;
+//     text-align: center;
+//     font-size: 31px;
+//     line-height: 42px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #1d1040;
+//   }
+//   .NSSDK-ST__title {
+//     width: initial;
+//     text-align: center;
+//     font-size: 31px;
+//     line-height: 42px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #1d1040;
+//     margin-top: 48px;
+//   }
+// }
+
+// @media screen and (max-width: $mobile) {
+//   .NSSDK-REASONS__title {
+//     margin-top: 48px;
+//     text-align: center;
+//     font-size: 22px;
+//     line-height: 32px;
+//   }
+//   .NSSDK-header__left .NSSDK-header__left-title {
+//     text-align: center;
+//     font-size: 36px;
+//     line-height: 42px;
+//   }
+//   $mob-content-wight: calc(100%);
+
+//   .NSSDK-E {
+//     height: initial;
+//   }
+
+//   .NSSDK-E__body {
+//     padding-bottom: 40px;
+//   }
+
+//   .NSSDK-E__row {
+//     flex-direction: column;
+//     padding: 0 16px 0 16px;
+//     margin-top: 24px;
+//   }
+
+//   .NSSDK-E__row-title {
+//     text-align: left;
+//     font-size: 18px;
+//     line-height: 24px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #ffffff;
+//     padding: 16px 0 6px 0;
+//   }
+
+//   .NSSDK-E__row {
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+//   .NSSDK-E__row:nth-child(odd) {
+//     flex-direction: column;
+//   }
+
+//   .NSSDK-E__content-dec {
+//     display: none;
+//   }
+
+//   .NSSDK-E__row-img {
+//     width: $mob-content-wight;
+//     height: 82px;
+//     margin: initial;
+//   }
+
+//   .NSSDK-E__row-info {
+//     width: $mob-content-wight;
+//     margin: initial;
+//   }
+
+//   .NSSDK-E__title {
+//     width: $mob-content-wight;
+//     font-size: 22px;
+//     line-height: 32px;
+//     font-weight: 700;
+//     margin-top: 0;
+//   }
+
+//   .NSSDK-E__row-text {
+//     text-align: left;
+//     font-size: 14px;
+//     line-height: 22px;
+//     letter-spacing: 0;
+//     color: #ffffff;
+//     opacity: 0.65;
+//   }
+
+//   .NSSDK-E__content {
+//     margin-top: 48px;
+//   }
+//   .NSSDK-header {
+//     margin-top: -167px;
+//   }
+
+//   .NSSDK-header__left {
+//     display: block;
+//     position: relative;
+//     margin: -100px 16px 0 16px;
+//   }
+
+//   .NSSDK-header__left .TechWrapperBackLink.top {
+//     display: none;
+//   }
+
+//   .NSSDK-header__left-right {
+//     display: block;
+//     position: relative;
+//     width: 100%;
+//     height: 360px;
+//     background-size: 481px 307px;
+//     margin-left: initial;
+//     background-position: center center;
+//   }
+
+//   .NSSDK-header__left-text {
+//     margin-top: 10px;
+//     font-size: 18px;
+//     line-height: 24px;
+//   }
+//   .NSSDK-ST__body {
+//     width: 100%;
+//     height: initial;
+//     padding-bottom: 24px;
+//   }
+//   .NSSDK-ST__body,
+//   .NSSDK-REASONS__body {
+//     padding-bottom: 24px;
+//   }
+
+//   .NSSDK-ST__title {
+//     width: initial;
+//     text-align: center;
+//     font-size: 22px;
+//     line-height: 32px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #1d1040;
+//     margin-top: 32px;
+//     margin-bottom: 18px;
+//   }
+
+//   .NSSDK-ST__row-decoration {
+//     display: none;
+//   }
+
+//   .NSSDK-ST__row {
+//     width: initial;
+//     flex-direction: column;
+//   }
+
+//   .NSSDK-ST_row-card {
+//     width: initial;
+//     margin: 6px 0 0 0;
+//     align-items: center;
+//   }
+
+//   .NSSDK-ST_row-card:before {
+//     content: " ";
+//     display: block;
+//     width: 12px;
+//     height: 12px;
+//     @include setBackgroundImage("../../assets/Ellipse324.svg");
+//     left: 0;
+//     position: absolute;
+//     opacity: unset;
+//     top: 50%;
+//     margin-top: unset;
+//     z-index: 3;
+//   }
+//   .NSSDK-REASONS {
+//     margin-bottom: 0;
+//   }
+
+//   .NSSDK-REASONS__body {
+//     height: initial;
+//   }
+
+//   .NSSDK-REASONS__row {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: initial;
+//     justify-content: center;
+//   }
+
+//   .NSSDK-REASONS__card {
+//     display: flex;
+//     width: initial;
+//     margin: 20px 0;
+//   }
+
+//   .NSSDK-REASONS__card-title {
+//     text-align: left;
+//     font-size: 18px;
+//     line-height: 24px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #1d1040;
+//   }
+
+//   .NSSDK-REASONS__card-contetn {
+//     margin-left: 16px;
+//   }
+
+//   .NSSDK-REASONS__card-text {
+//     width: initial;
+//     text-align: left;
+//     font-size: 14px;
+//     line-height: 22px;
+//     letter-spacing: 0;
+//     color: #1d1040;
+//   }
+
+//   .NSSDK-REASONS__card-img {
+//     width: 40px;
+//     height: 40px;
+//     min-width: 40px;
+//     min-height: 40px;
+//   }
+
+//   .NSSDK-REASONS__card:nth-child(1) .NSSDK-REASONS__card-img {
+//     background-size: contain;
+//   }
+
+//   .NSSDK-REASONS__card:nth-child(2) .NSSDK-REASONS__card-img {
+//     background-size: contain;
+//   }
+
+//   .NSSDK-REASONS__card:nth-child(3) .NSSDK-REASONS__card-img {
+//     background-size: contain;
+//   }
+
+//   .NSSDK-REASONS__card:nth-child(4) .NSSDK-REASONS__card-img {
+//     background-size: contain;
+//   }
+
+//   .NSSDK-REASONS__card:nth-child(5) .NSSDK-REASONS__card-img {
+//     background-size: contain;
+//   }
+//   .NSSDK-REASONS__card:nth-child(6) .NSSDK-REASONS__card-img {
+//     background-size: contain;
+//   }
+//   .NSSDK-header__body,
+//   .NSSDK-ST__body,
+//   .NSSDK-ST__body,
+//   .NSSDK-REASONS__body,
+//   .NSSDK-REASONS__body,
+//   .NSSDK-E__body,
+//   .NSSDK-E__body,
+//   .NSSDK-Benefits__body,
+//   .NSSDK-Benefits__body,
+//   .NSSDK-Specification__body {
+//     box-sizing: border-box;
+//     padding: 48px 16px 24px 16px;
+//   }
+//   .NSSDK-Specification {
+//     justify-content: initial;
+//     margin-top: 0px;
+//   }
+
+//   .NSSDK-Specification__title {
+//     font-size: 22px;
+//     line-height: 32px;
+//     font-weight: 700;
+//     margin-top: 32px;
+//   }
+
+//   .NSSDK-Benefits__card {
+//     margin-right: 0;
+//   }
+//   .NSSDK-Benefits {
+//     padding-top: 60px;
+//     padding-bottom: 0px;
+//   }
+
+//   .NSSDK-Benefits__body {
+//     width: initial;
+//   }
+
+//   .NSSDK-Benefits__title {
+//     text-align: center;
+//     font-size: 22px;
+//     line-height: 32px;
+//     font-weight: 700;
+//     letter-spacing: 0;
+//     color: #1d1040;
+//   }
+
+//   .NSSDK-Benefits__content {
+//     flex-direction: column;
+//     margin: 16px 0 0 0;
+//   }
+
+//   .NSSDK-Benefits__content div {
+//     width: initial;
+//   }
+
+//   .NSSDK-Benefits__card-title {
+//     width: initial;
+//     font-size: 18px;
+//     line-height: 24px;
+//     font-weight: 700;
+//     margin-top: 18px;
+//   }
+
+//   .NSSDK-Benefits__card-text {
+//     font-size: 14px;
+//     line-height: 22px;
+//     margin-top: 6px;
+//   }
+
+//   .NSSDK-Benefits__card-index {
+//     font-size: 60px;
+//     line-height: 36px;
+//   }
+
+//   .NSSDK-RequestTrial-submit {
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+//     margin: 0 auto;
+//   }
+//   .NSSDK-Benefits__card-info {
+//     margin-right: 16px;
+//     margin-left: 16px;
+//   }
+//   .NSSDK-header__title,
+//   .NSSDK-header__title,
+//   .NSSDK-ST__title,
+//   .NSSDK-ST__title,
+//   .NSSDK-REASONS__title,
+//   .NSSDK-REASONS__title,
+//   .NSSDK-E__title,
+//   .NSSDK-E__title,
+//   .NSSDK-Benefits__title,
+//   .NSSDK-Benefits__title,
+//   .NSSDK-Specification__title {
+//     margin-top: 0;
+//   }
+//   .NSSDK-header,
+//   .NSSDK-header,
+//   .NSSDK-ST,
+//   .NSSDK-ST,
+//   .NSSDK-REASONS,
+//   .NSSDK-REASONS,
+//   .NSSDK-E,
+//   .NSSDK-E,
+//   .NSSDK-Benefits,
+//   .NSSDK-Benefits,
+//   .NSSDK-Specification {
+//     padding-top: 0;
+//   }
+// }
+
+.item__res {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 396px;
+  width: 100%;
+  margin-right: 32px;
+}
+.item__res:nth-child(3n) {
+  margin-right: 0;
+}
+
+.item__res:hover .item__res_image {
+  opacity: 1;
+  transform: translateY(110px);
+}
+.item__res:hover .item__res_title {
+  color: #5a5dff;
+}
+.item__res_image {
+  z-index: 1;
+  background-color: #cecece;
+  width: 348px;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+  opacity: 0.5;
+  transform: translateY(123px);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.item__res_about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  z-index: 2;
+  // max-width: 396px;
+  width: 100%;
+  height: 188px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 12px #5463ff26;
+  border-radius: 6px;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+.resourses__block {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr;
+  // grid-gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.item__res_type {
+  font-size: 13px;
+  line-height: 18px;
+  color: #1d1040;
+}
+.item__res_title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1d1040;
+  flex: 1 1 100%;
+}
+// .item__res_about_arrow {
+//   min-height: 10px;
+//   background-color: #1d1040;
+// }
+.nres .content {
+  max-width: 1282px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: $tablet) {
+  .item__res:nth-child(2n) {
+    margin-right: 0;
+  }
+  .item__res:nth-child(3n) {
+    margin-right: 32px;
+  }
+}
+@media screen and (max-width: $mobile) {
+  .item__res {
+    margin-right: 0;
+  }
+  .item__res:nth-child(2n) {
+    margin-right: 0;
+  }
+  .item__res:nth-child(3n) {
+    margin-right: 0;
+  }
+}

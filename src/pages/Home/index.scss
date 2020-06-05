@@ -1,0 +1,59 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+.up-button {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background-color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-out;
+  @include setFlexPosition(center, center);
+  box-shadow: 0px 6px 12px #5463ff70;
+  // z-index: 3;
+  z-index: 9;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &::before {
+    width: 16px;
+    height: 16px;
+    transform: rotate(180deg);
+    content: '';
+    @include setBackgroundImage('../../assets/down-arrow-black.svg', contain);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.hide-transition {
+  top: -100px;
+  transition: top 0.3s;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  width: 17px;
+}

@@ -1,0 +1,252 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+.SolutionsSection-container {
+  background: $blue400 0% 0% no-repeat padding-box;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* 1920 - SVG width, 90 - SVG height*/
+$backgroundHeight: calc(100vw / 1920 * 100);
+$backgroundHeightWith5Pixels: calc(100vw / 1920 * 100 + 8px);
+
+.SolutionsSection-container .background-triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% calc(100% - 8px));
+  background-image: linear-gradient(90deg, $pink 0%, $aqua 100%);
+  height: $backgroundHeightWith5Pixels;
+}
+
+.SolutionsSection-container .background-triangle-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 50% 100%);
+  background-color: rgb(230, 232, 255);
+  height: $backgroundHeight;
+}
+
+.SolutionsSection-content {
+  margin-top: 60px;
+  margin-bottom: 118px;
+}
+
+.SolutionsSection-content p {
+  margin: 13px auto 60px auto;
+}
+
+.SolutionsSection-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px 32px;
+  // grid-gap: 112px 32px;
+}
+
+.SolutionsSection-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  min-height: 250px;
+}
+
+.SolutionsSection-item h2 {
+  margin-top: 13px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.SolutionsSection-item p {
+  font-size: 15px;
+  margin: 10px 0 0;
+  text-align: left;
+  line-height: 24px;
+  color: #fff;
+  opacity: 0.65;
+  min-height: 94px;
+  display: block;
+  max-height: 96px;
+  text-align: center;
+}
+
+.SolutionsSection-image {
+  align-self: stretch;
+  height: 72px;
+  background-size: contain !important;
+}
+
+.sectionSubTitle.solutionSubTitle {
+  font-size: 22px;
+  line-height: 24px;
+  max-width: 824px;
+  width: 100%;
+
+  & .solutionSubTitleText {
+    margin: 24px 0 0;
+    display: block;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.SolutionsSection-item .first {
+  @include setBackgroundImage('../../assets/Group-first-solution.svg');
+  height: 114px;
+}
+
+.SolutionsSection-item .second {
+  @include setBackgroundImage('../../assets/Group-second-solution.svg');
+}
+
+.SolutionsSection-item .third {
+  @include setBackgroundImage('../../assets/Group-third-solution.svg');
+  height: 103px;
+}
+
+.SolutionsSection-item .fourth {
+  @include setBackgroundImage('../../assets/Group-fourth-solution.svg');
+  height: 88px;
+}
+
+.SolutionsSection-item .fifth {
+  @include setBackgroundImage('../../assets/Group-fifth-solution.svg');
+  height: 88px;
+}
+
+.SolutionsSection-item .sixth {
+  @include setBackgroundImage('../../assets/Group-sixth-solution.svg');
+  height: 103px;
+}
+
+@media screen and (max-width: 1240px) {
+  .SolutionsSection-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .SolutionsSection-content {
+    margin: 40px 0 77px 0;
+  }
+
+  .SolutionsSection-grid {
+    grid-gap: 24px;
+  }
+
+  .SolutionsSection-item h2 {
+    font-size: 24px;
+  }
+
+  .sectionSubTitle.solutionSubTitle {
+    font-size: 18px;
+    line-height: 24px;
+
+    & .solutionSubTitleText {
+      font-size: 18px;
+      line-height: 24px;
+      margin: 22px 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .SolutionsSection-content {
+    margin: 28px 0 40px 0;
+    margin-top: 0;
+  }
+
+  .SolutionsSection-gridWrapper {
+    overflow-y: hidden;
+    // height: 240px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  .SolutionsSection-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0 16px;
+    max-width: calc(100vw - 32px);
+    padding-bottom: 30px;
+  }
+
+  .SolutionsSection-grid::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  .SolutionsSection-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .SolutionsSection-grid::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  .SolutionsSection-item {
+    min-width: 280px;
+    box-sizing: border-box;
+    padding: 16px 16px 7px 16px;
+    margin-right: 16px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #332752;
+    justify-content: center;
+  }
+
+  .SolutionsSection-item h2 {
+    margin: 12px 0 10px 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .SolutionsSection-item p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    max-height: unset;
+  }
+
+  .SolutionsSection-image {
+    height: 60px;
+  }
+
+  // .sectionSubTitle.solutionSubTitle {
+  //   margin-left: 16px;
+  //   margin-right: 16px;
+  // }
+}

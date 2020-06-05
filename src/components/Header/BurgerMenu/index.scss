@@ -1,0 +1,161 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/mixins.scss';
+@import 'shared/styles/colors.scss';
+
+$burgerBG: #f2f2ff;
+
+.burgerButton {
+  cursor: pointer;
+  display: none;
+}
+
+.burgerContainer {
+  display: none;
+}
+
+@media screen and (max-width: $tablet) {
+  .burgerButton {
+    padding: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin-left: 4px;
+    @include setBackgroundImage('../../assets/burger-icon.svg');
+  }
+  .burgerContainer {
+    display: block;
+  }
+  .burgerBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    // background: rgba(0, 0, 0, 0.5);
+    // filter: brightness(50%) blur(50px);
+    background: transparent 0 0% no-repeat padding-box;
+    backdrop-filter: blur(15px);
+  }
+  .burgerMenuContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -400px;
+    z-index: 30;
+    background: $burgerBG;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 296px;
+    transition: right 0.5s ease-out;
+  }
+  .burgerSubMenu.open{
+    padding-top: 14px;
+  }
+  .burgerContainer.show .burgerMenuContainer {
+    right: 0;
+  }
+  .burgerContainer.show .burgerBackground {
+    display: block;
+  }
+  .burgerHeader {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: 56px;
+    box-shadow: #5463ff26 0 3pt 6px 0;
+  }
+
+  .burgerLogo {
+    @include setBackgroundImage('../../assets/logo_dark_with_r.svg', contain);
+    height: 32px;
+    width: 112px;
+    margin: 12px 24px;
+  }
+  .burgerClose {
+    @include setBackgroundImage('../../assets/close-icon.svg', contain);
+    width: 48px;
+    height: 48px;
+    background-color: white;
+    padding: 0;
+  }
+  .burgerMenu {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+
+  .burgerMenu li {
+    text-transform: uppercase;
+    text-align: left;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    height: 48px;
+  }
+  .burgerMenu li,
+  .burgerMenu a,
+  .burgerMenu span {
+    color: $blue400;
+    font-weight: 700;
+  }
+  .burgerMenu li.submenu {
+    position: relative;
+    height: auto;
+  }
+  .burgerMenu li.submenu span::before {
+    content: '';
+    @include setBackgroundImage('../../assets/right-icon.svg');
+    position: absolute;
+    right: 27px;
+    top: 15px;
+    width: 7px;
+    height: 12px;
+  }
+  .burgerMenu li.submenu span.open::before{
+    transform: rotate(90deg);
+  }
+  .burgerRequest {
+    padding: 24px;
+    display: flex;
+    justify-content: stretch;
+  }
+  .burgerSubMenu {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s linear;
+  }
+  .burgerSubMenu.open {
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .burgerHeader {
+    height: 48px;
+  }
+  .burgerLogo {
+    height: 24px;
+    width: 84px;
+  }
+}

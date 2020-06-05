@@ -1,0 +1,405 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+.TechWrapperContainer {
+  max-width: 1960px;
+  // max-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  color: #1d1040;
+  overflow: hidden;
+}
+
+.TechWrapperImage {
+  position: fixed;
+  width: 50%;
+  padding: 180px 48px 48px 48px;
+  box-sizing: border-box;
+  flex: 1 1 0;
+  max-width: 912px;
+  height: 100vh;
+  @include setFlexPosition(center, center, column);
+  background-color: $grayBG;
+  & img {
+    max-height: 100%;
+    max-width: 100%;
+    object-position: center center;
+    object-fit: cover;
+  }
+}
+.TechWrapperImage h1 {
+  display: none;
+}
+
+.TechWrapperContent {
+  position: relative;
+  flex: 1 1;
+  padding: 180px 0 0 64px;
+  width: 100%;
+  margin-left: 50%;
+  box-sizing: border-box;
+}
+
+.TechWrapperBackLink {
+  position: absolute;
+  top: 120px;
+  left: 64px;
+  font-size: 14px;
+  color: $blue200;
+  text-transform: uppercase;
+
+  & a {
+    position: relative;
+    margin-left: 26px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+    color: $blue200;
+  }
+  a:link {
+    color: $blue200;
+  }
+
+  /* visited link */
+  a:visited {
+    color: $blue200;
+  }
+  & a::before {
+    position: absolute;
+    left: -26px;
+    top: 50%;
+    content: '';
+    @include setBackgroundImage('../../assets/right-arrow.svg');
+    width: 18px;
+    height: 12px;
+    transform: translateY(-50%) rotate(180deg);
+  }
+  &.bottom {
+    margin-top: 43px;
+    position: initial;
+    margin-bottom: 43px;
+  }
+}
+
+.TechWrapperTools {
+  position: fixed;
+  top: 180px;
+  right: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TechWrapperNextLink {
+  background: transparent linear-gradient(90deg, $pink 0%, $aqua 100%) 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  transition: opacity 0.3s ease-out;
+  @include setFlexPosition(center, center);
+  &:hover {
+    opacity: 0.9;
+  }
+  & a {
+    box-shadow: 0px 6px 16px #5463ff40;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    @include setFlexPosition(center, center);
+    font-size: 26px;
+    &::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      @include setBackgroundImage('../../assets/arr_r.svg', contain);
+    }
+  }
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.25;
+  }
+}
+
+.TechWrapperPreviousLink {
+  margin-top: 26px;
+  background: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-out;
+  @include setFlexPosition(center, center);
+  box-shadow: 0px 6px 12px #5463ff40;
+  &:hover {
+    opacity: 0.9;
+  }
+  & a {
+    font-size: 20px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    &::before {
+      content: '';
+      width: 12px;
+      display: block;
+      height: 12px;
+      @include setBackgroundImage('../../assets/arr_l.svg', contain);
+    }
+  }
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.25;
+  }
+}
+
+.TechWrapperNumberContainer {
+  display: flex;
+  flex-direction: column;
+  color: $blue400;
+}
+
+.TechWrapperTopNumber {
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 76px;
+}
+
+.TechWrapperBottomNumber {
+  text-align: center;
+  font-size: 24px;
+  opacity: 0.25;
+  margin-top: -16px;
+}
+
+.TechWrapperLine {
+  width: 2px;
+  min-height: calc((100vh - 653px) / 2);
+  flex: 1 1 0;
+  max-width: 126px;
+  border-right: 2px dashed $blue200;
+  opacity: 0.25;
+  margin: 32px 0;
+  box-sizing: border-box;
+  &.dot {
+    position: relative;
+  }
+  &.dot::after {
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    border: 2px dashed $blue200;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    left: -7px;
+    right: -7px;
+    bottom: -19px;
+    margin: auto;
+  }
+}
+
+.TechWrapperMain {
+  position: relative;
+  max-width: 610px;
+  margin-right: 96px;
+  &.fullscreen {
+    max-width: initial;
+  }
+}
+
+.TechWrapperNextLink.mob,
+.TechWrapperPreviousLink.mob {
+  display: none;
+}
+
+@media screen and (max-width: 1750px) {
+  .TechWrapperTools {
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  .TechWrapperTools {
+    right: 24px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .TechWrapperBottomNumber {
+    margin-top: 0;
+  }
+  
+  .TechWrapperContent {
+    margin-left: 0;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 0;
+    overflow-y: auto;
+  }
+  .Header-container {
+    display: flex !important;
+  }
+  .TechWrapperContainer {
+    flex-direction: column;
+    max-height: unset;
+    height: auto;
+  }
+  .TechWrapperImage {
+    position: relative;
+    width: unset;
+    padding: 96px 24px 64px 24px;
+    margin-right: 96px;
+    height: auto;
+  }
+  .TechWrapperImage h1 {
+    display: block;
+    margin-bottom: 27px;
+  }
+  .TechWrapperMain {
+    max-width: initial;
+    margin-right: 72px;
+    align-self: stretch;
+
+    h1 {
+      display: none;
+    }
+  }
+  .TechWrapperTools {
+    right: 24px;
+    top: 96px;
+    bottom: 24px;
+  }
+  .TechWrapperBackLink.top {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .TechWrapperImage h1 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  .icon_one_protocol,
+  .icon_one_hardware_drm,
+  .icon_media_agnostic,
+  .icon_nano_multicast,
+  .icon_nmps_packager,
+  .icon_one_player {
+    height: 390px !important;
+  }
+  .TechWrapperNextLink.mob,
+  .TechWrapperPreviousLink.mob {
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 44px;
+    width: 44px;
+  }
+  .TechWrapperPreviousLink.mob a,
+  .TechWrapperNextLink.mob a {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 26px;
+    background: transparent;
+    box-shadow: none;
+  }
+  .TechWrapperPreviousLink.mob {
+    left: 0;
+  }
+  .TechWrapperNextLink.mob {
+    right: 0;
+  }
+  .TechWrapperContent {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .TechWrapperTools {
+    display: none;
+  }
+  .TechWrapperImage {
+    padding: 60px 16px 60px 16px;
+    margin-right: 0;
+  }
+  .TechWrapperMain {
+    margin-right: 0;
+  }
+}
+
+.icon_one_hardware_drm {
+  @include setBackgroundImage('../../assets/one_hardware_drm.png');
+  max-width: 583px;
+  width: 100%;
+  height: 666px;
+  background-size: contain;
+}
+
+.icon_one_player {
+  @include setBackgroundImage('../../assets/one_player.png');
+  max-width: 583px;
+  width: 100%;
+  height: 666px;
+  background-size: contain;
+}
+
+.icon_one_protocol {
+  @include setBackgroundImage('../../assets/one_protocol.png');
+  max-width: 583px;
+  width: 100%;
+  height: 666px;
+  background-size: contain;
+}
+
+.icon_nano_multicast {
+  @include setBackgroundImage('../../assets/nano_multicast.png');
+  max-width: 583px;
+  width: 100%;
+  height: 666px;
+  background-size: contain;
+}
+
+.icon_media_agnostic {
+  @include setBackgroundImage('../../assets/media_agnostic.png');
+  max-width: 583px;
+  width: 100%;
+  height: 666px;
+  background-size: contain;
+}
+.icon_nmps_packager {
+  @include setBackgroundImage('../../assets/nmps_packager.png');
+  max-width: 583px;
+  width: 100%;
+  height: 666px;
+  background-size: contain;
+}

@@ -1,0 +1,110 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import 'shared/styles/mixins.scss';
+
+.RequestForm {
+  padding: 48px;
+  background: white;
+  max-height: 80vh;
+  max-width: 1240px;
+  border-radius: 6px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.srv-validation-message {
+  color: red;
+  margin-top: 5px;
+}
+
+select {
+  flex-grow: 1;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  padding: 14px;
+}
+
+.RequestFormTitle {
+  margin-bottom: 20px;
+}
+
+.RequestForm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 32px;
+}
+
+.RequestForm-grid input {
+  min-width: 320px;
+}
+
+.RequestFormCheckboxes,
+.RequestFormCheckbox {
+  display: flex;
+  align-items: center;
+}
+
+.RequestFormCheckbox {
+  margin: 10px 10px 10px 0;
+}
+
+.RequestFormCheckbox label {
+  margin-bottom: 0;
+}
+
+.RequestForm-input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.RequestForm button {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .RequestForm-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .RequestForm-grid {
+    grid-gap: 24px;
+  }
+  .RequestForm {
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .RequestForm-grid {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+  .RequestForm {
+    padding: 16px;
+  }
+  .RequestForm {
+    margin: 20px;
+  }
+  .RequestFormCheckboxes {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

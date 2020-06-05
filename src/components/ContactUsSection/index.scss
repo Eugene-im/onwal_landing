@@ -1,0 +1,165 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import "shared/styles/colors.scss";
+@import "shared/styles/mixins.scss";
+
+.ContactSection-container {
+  color: $blue400;
+  text-align: center;
+  background-color: rgb(230, 232, 255);
+}
+
+.ContactSectionBackground {
+  background: $grayBG 0% 0% no-repeat padding-box;
+  width: 100%;
+  position: absolute;
+}
+
+.ContactSection-subtitle {
+  margin: 26px auto 19px auto;
+  max-width: 824px;
+}
+
+.ContactSection-content {
+  margin-top: 70px;
+  margin-bottom: 86px;
+  .sectionTitle{
+    color: #1d1040;
+  }
+}
+
+.ContactSection-form {
+  display: grid;
+  grid-gap: 32px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "name email phone" "message message message" ". submit .";
+}
+
+.ContactSection-recaptcha {
+  margin: 0;
+  margin-top: 15px;
+  line-height: 22px;
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.ContactSection-form .ContactSection-submit {
+  grid-area: submit;
+  z-index: 2;
+}
+
+.ContactSection-form .message {
+  grid-area: message;
+}
+
+.ContactSection-form .name {
+  grid-area: name;
+}
+
+.ContactSection-form .email {
+  grid-area: email;
+}
+
+.ContactSection-form .phone {
+  grid-area: phone;
+}
+
+.ContactSection-input-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+}
+
+.ContactSection-input-wrap .srv-validation-message {
+  text-align: left;
+}
+
+.ContactSection-input-wrap textarea::placeholder {
+  font-family: "Open Sans";
+}
+.ContactSection-input-wrap textarea {
+  min-height: 144px;
+}
+
+.ContactSection-dot,
+.ContactSection-blurLogo {
+  position: absolute;
+}
+
+.ContactSection-dot {
+  bottom: 5%;
+  left: 20%;
+  position: absolute;
+}
+
+.ContactSection-blurLogo {
+  top: 20%;
+  right: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+  .ContactSection-input-wrap input,
+  .ContactSection-input-wrap textarea {
+    flex: 1 1 100%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .ContactSection-dot,
+  .ContactSection-blurLogo {
+    display: none;
+  }
+
+  .ContactSection-form {
+    grid-gap: 24px;
+  }
+
+  .ContactSection-content {
+    margin-bottom: 66px;
+  }
+
+  .ContactSection-content .sectionSubTitle {
+    margin: 18px 0 29px 0;
+  }
+
+  .ContactSection-input-wrap input,
+  .ContactSection-input-wrap textarea {
+    min-width: 180px;
+  }
+}
+
+@media screen and (max-width: 775px) {
+  .ContactSection-form {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    grid-template-areas: "name" "email" "phone" "message" "submit";
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .ContactSection-content {
+    margin-top: 40px;
+    margin-bottom: 58px;
+  }
+
+  .ContactSection-content p {
+    margin: 20px 0 5px 0;
+  }
+
+  .sectionTitle {
+    color: white;
+  }
+}

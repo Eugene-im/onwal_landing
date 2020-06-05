@@ -1,0 +1,47 @@
+@import 'shared/styles/colors.scss';
+@import 'shared/styles/mixins.scss';
+
+.page-404__body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-404__body-icon {
+  width: 100%;
+  height: 500px;
+  background-image: url('../../assets/not_found_icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 618px 500px;
+}
+.page-404__body-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.page-404__body-content {
+}
+
+.page-404__body-content__title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #1d1040;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.page-404__body-content__subtitle {
+  text-align: center;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  color: #1d1040;
+  opacity: 1;
+}

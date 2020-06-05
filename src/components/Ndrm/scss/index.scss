@@ -1,0 +1,16 @@
+@import "var";
+
+html, body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper-content {
+  // padding: 45px 0 0 0;
+  //margin: 55px 0 0 0;
+  // padding: 0;
+  background: $color-light2;
+}
+
+@import "grid";
+@import "ndrm";
+

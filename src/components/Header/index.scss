@@ -1,0 +1,515 @@
+/*******************************************************************************
+ * NETTR GROUP CONFIDENTIAL                                                    *
+ * ________________________________________________________________________    *
+ *                                                                             *
+ *  Copyright (C) 2020 Nettr Group                                             *
+ *  All Rights Reserved.                                                       *
+ *                                                                             *
+ * NOTICE:  All information contained herein is, and remains the property      *
+ * of Nettr Group and its suppliers, if any.  The intellectual and technical   *
+ * concepts contained herein are proprietary to Nettr Group and its            *
+ * suppliers, and are protected by trade secret or copyright law.              *
+ * Dissemination of this information or reproduction of this material          *
+ * is strictly forbidden unless prior written permission is obtained           *
+ * from Nettr Group.                                                           *
+ ******************************************************************************/
+@import "shared/styles/colors.scss";
+@import "shared/styles/mixins.scss";
+
+.Header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 17px;
+  // padding: 52px 88px 52px 88px;
+  padding: 52px 105px 52px 88px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  z-index: 10;
+  white-space: nowrap;
+  transition: all 0.2s ease-out;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  pointer-events: none;
+  & * {
+    pointer-events: all;
+  }
+}
+
+.Header-logo {
+  height: 40px;
+  width: 147px;
+  @include setBackgroundImage("../../assets/logo_with_r.svg");
+  background-size: contain !important;
+}
+
+.Header-navigation {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Navigation-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.Nav-technology-container:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  z-index: -1;
+}
+
+.Nav-products-container:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  z-index: -1;
+}
+
+.Navigation-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 22px;
+  // height: 40px;
+}
+
+.Navigation-item a {
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  transition: opacity 0.3s ease-out;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.Navigation-item:hover > a {
+  opacity: 0.8;
+}
+
+.Navigation-item-line {
+  width: auto;
+  margin: 0 auto;
+  min-width: 0px;
+  height: 2px;
+  background: white;
+  transition: min-width 0.3s ease-out;
+}
+
+.Navigation-item:hover .Navigation-item-line {
+  min-width: 32px;
+}
+
+.subnav {
+  position: relative;
+}
+
+.subnav a {
+  position: relative;
+  padding-right: 27px;
+}
+
+.subnav .Subnav-arrow {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(../../assets/Group-icon.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right;
+  width: 12px;
+  padding-left: 15px;
+  height: 38px;
+}
+
+.Navigation-item.subnav ul {
+  padding: 8px 0;
+  min-width: 384px;
+  box-shadow: 0px 3px 6px #00000059;
+}
+
+.Subnav-technology-container {
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  background: white;
+  border-radius: 6px;
+  transition: opacity 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  // padding: 8px 0;
+  // min-width: 384px;
+  // box-shadow: 0px 3px 6px #00000059;
+
+  // & a:first-child .Subnav-item {
+  //   height: 72px;
+  //   padding-top: 23px;
+  // }
+
+  // & a:last-child .Subnav-item {
+  //   height: 72px;
+  //   padding-bottom: 23px;
+  // }
+}
+
+.Subnav-technology-container a {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.Subnav-products-container {
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  background: white;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+
+  // .Subnav-item {
+  // height: 72px;
+  // padding-top: 23px;
+  // }
+
+  // & a:last-child .Subnav-item {
+  // height: 72px;
+  // padding-bottom: 23px;
+  // }
+}
+
+.Subnav-products-container a {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.Subnav-container-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Subnav-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  cursor: pointer;
+  padding: 14px;
+  height: 64px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-out;
+}
+
+.Subnav-item:hover {
+  background-color: $blue100;
+
+  .subnav-icon.first {
+    @include setBackgroundImage("../../assets/Group-first-tech-white.svg", 105%);
+  }
+
+  .subnav-icon.second {
+    @include setBackgroundImage("../../assets/Group-second-tech-white.svg", 105%);
+  }
+
+  .subnav-icon.third {
+    @include setBackgroundImage("../../assets/Group-third-tech-white.svg", 105%);
+  }
+
+  .subnav-icon.fourth {
+    @include setBackgroundImage("../../assets/Group-fourth-tech-white.svg", 105%);
+  }
+
+  .subnav-icon.fifth {
+    @include setBackgroundImage("../../assets/Group-fifth-tech-white.svg", 105%);
+  }
+
+  .subnav-icon.sixth {
+    @include setBackgroundImage("../../assets/Group-sixth-tech-white.svg", 105%);
+  }
+}
+
+.Subnav-item span,
+.Subnav-item span::before {
+  // border-radius: 50%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-out;
+}
+
+.Subnav-item .subnav-icon {
+  align-self: stretch;
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.subnav-icon.first {
+  @include setBackgroundImage("../../assets/Group-first-tech.svg", contain);
+}
+
+.subnav-icon.second {
+  @include setBackgroundImage("../../assets/Group-second-tech.svg", contain);
+}
+
+.subnav-icon.third {
+  @include setBackgroundImage("../../assets/Group-third-tech.svg", contain);
+}
+
+.subnav-icon.fourth {
+  @include setBackgroundImage("../../assets/Group-fourth-tech.svg", contain);
+}
+
+.subnav-icon.fifth {
+  @include setBackgroundImage("../../assets/Group-fifth-tech.svg", contain);
+}
+
+.subnav-icon.sixth {
+  @include setBackgroundImage("../../assets/Group-sixth-tech.svg", contain);
+}
+
+.Subnav-products-item-link .subnav-icon.first {
+  @include setBackgroundImage("../../assets/Group-first-prod.svg", contain);
+}
+
+.Subnav-products-item-link .subnav-icon.second {
+  @include setBackgroundImage("../../assets/Group-second-prod.svg", contain);
+}
+
+.Subnav-products-item-link:hover .subnav-icon.first {
+  @include setBackgroundImage("../../assets/Group-first-prod-white.svg", 105%);
+}
+
+.Subnav-products-item-link:hover .subnav-icon.second {
+  @include setBackgroundImage("../../assets/Group-second-prod-white.svg", 105%);
+}
+
+.Subnav-products-item-link .Subnav-item span,
+.Subnav-products-item-link .Subnav-item span::before {
+  border-radius: initial;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-out;
+}
+
+.Subnav-text {
+  color: $blue400;
+  flex-grow: 1;
+}
+
+.Subnav-item:hover {
+  p,
+  .Subnav-text {
+    color: white;
+  }
+}
+
+.Subnav-text h1 {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.Subnav-text p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 19px;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+.Header-request-button {
+  cursor: pointer;
+  @include setFlexPosition(center, center);
+  padding: 0 30.18px;
+  border-radius: 24px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 10px;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
+  box-sizing: border-box;
+  height: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.Header-request-button:hover {
+  color: $blue400;
+  background-color: white;
+}
+
+.TechWrapperBackLink > div:before {
+  position: absolute;
+  left: -26px;
+  top: 50%;
+  content: "";
+  @include setBackgroundImage("../../assets/right-arrow.svg");
+  width: 18px;
+  height: 12px;
+  transform: translateY(-50%) rotate(180deg);
+}
+header .TechWrapperBackLink > div:before {
+  left: unset;
+}
+
+@media screen and (max-width: 1240px) {
+  .Header-container {
+    padding: 40px 16px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Header-container.sticky {
+    width: 100%;
+    position: fixed;
+    background: white;
+    padding: 8px 16px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 56px;
+    box-sizing: border-box;
+    box-shadow: $gray500 0 3pt 6px 0;
+
+    & .Header-logo {
+      height: 32px;
+      width: 100px;
+      @include setBackgroundImage("../../assets/logo_dark_with_r.svg", contain);
+    }
+
+    & .Navigation-item a {
+      color: $blue400;
+    }
+
+    & .Navigation-item-line {
+      background-color: $blue400;
+    }
+
+    & .subnav .Subnav-arrow {
+      background-image: url("../../assets/Group-icon-dark.svg");
+    }
+    & .Header-request-button {
+      color: $blue400;
+      border-color: $blue400;
+      padding: 0 20px;
+    }
+  }
+}
+
+.TechWrapperBackLink.mob {
+  display: none;
+}
+@media screen and (max-width: $tablet) {
+  .Header-container {
+    position: fixed;
+    background: white;
+    padding: 8px 16px;
+    justify-content: flex-end;
+    align-items: center;
+    height: 56px;
+    box-sizing: border-box;
+    box-shadow: $gray500 0 3pt 6px 0;
+    position: sticky;
+    top: 0;
+  }
+  .Header-request-button {
+    color: $blue400;
+    font-size: 14px;
+    padding: 8px 13px;
+    border-color: $blue400;
+    margin-left: 5px;
+  }
+  .Header-navigation {
+    display: none;
+  }
+  .Header-logo {
+    justify-self: flex-start;
+    align-self: center;
+    margin-right: auto;
+    height: 32px;
+    width: 96px;
+    color: $blue400;
+    @include setBackgroundImage("../../assets/logo_dark_with_r.svg", contain);
+  }
+  .Header-container.hide.mobile_request_trial.sticky.mobile_subpage .Header-logo {
+    margin-left: unset;
+    margin: auto;
+  }
+  .mobile_request_trial {
+    flex-direction: row-reverse;
+    .RequestTrialP-back {
+      display: block;
+      position: absolute;
+      left: unset;
+      top: unset;
+    }
+    #burgerButton,
+    .Header-request-button {
+      display: none;
+    }
+    .Header-logo {
+      margin-left: unset;
+      margin: auto;
+    }
+  }
+  .mobile_subpage {
+    flex-direction: row;
+    .RequestTrialP-back {
+      display: block;
+      position: static;
+      left: unset;
+      top: unset;
+      width: auto;
+      margin-right: 10px;
+    }
+    #burgerButton {
+      display: block;
+    }
+    .Header-request-button {
+      display: none;
+    }
+    .Header-logo {
+      margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .Header-container {
+    height: 48px;
+  }
+  .Header-logo {
+    height: 24px;
+    width: 84px;
+  }
+
+  .TechWrapperBackLink.mob.subpage {
+    display: block;
+    top: 0;
+    width: auto;
+    left: 0;
+  }
+
+  .Header-request-button.mob.subpage {
+    visibility: hidden;
+  }
+}

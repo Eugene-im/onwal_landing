@@ -1,0 +1,84 @@
+$color-light1: #ffffff;
+$color-light2: #E6E7FF;
+
+$color-dark1: #000000;
+$color-dark2: #1D1040;
+
+$color-blue1: #5A5DFF;
+
+/* Screen */
+$xs: 575px; /* <576px	Extra small   */
+$sm: 576px; /* ≥576px	Small         */
+$md: 768px; /* ≥768px	Medium        */
+$lg: 992px; /* ≥992px	Large         */
+$lx: 1200px; /* ≥1200pxExtra large   */
+
+@mixin xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 575px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 991px) {
+    @content;
+  }
+}
+
+@mixin lx {
+  @media (min-width: 1999px) {
+    @content;
+  }
+}
+
+@mixin ndrmH2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding: 0 3%;
+  @include sm {
+    text-align: left;
+    margin-top: 32px;
+    margin-bottom: 18px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @include md {
+    font-size: 31px;
+    line-height: 42px;
+    margin-top: 48px;
+    margin-bottom: 44px;
+  }
+  @include lg {
+    margin-top: 38px;
+    margin-bottom: 36px;
+    font-size: 36px;
+    line-height: 49px;
+  }
+
+}
+
+@mixin ndrmArrow {
+  position: absolute;
+  height: calc(100vw / 1920 * 90);
+  width: 100%;
+  clip-path: polygon(50% 0, 100% 85%, 100% 100%, 50% 100%, 0 100%, 0 85%);
+  z-index: 2;
+  display: block;
+  content: "";
+  left: 0;
+}

@@ -1,0 +1,162 @@
+.spinner {
+  background: #080413;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+
+  svg {
+    width: 252px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    padding: 40px;
+  }
+
+  .loader-icon {
+    fill: none;
+    stroke: #9d03ff;
+    stroke-width: 2;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 350;
+    animation: icon-stroke 4s 0.2s infinite ease-out;
+  }
+
+  @keyframes icon-stroke {
+    50% {
+      stroke-dashoffset: 0;
+      stroke: #00abf4;
+    }
+
+    100% {
+      stroke-dashoffset: -350;
+      stroke: #fff;
+    }
+  }
+
+  .loader-n {
+    fill: none;
+    stroke: #9d03ff;
+    stroke-width: 2;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: n-stroke 4s 0.2s infinite ease-out;
+  }
+
+  @keyframes n-stroke {
+    50% {
+      stroke-dashoffset: 0;
+      stroke: #00abf4;
+    }
+
+    100% {
+      stroke-dashoffset: -250;
+      stroke: #fff;
+    }
+  }
+
+  .loader-e {
+    fill: none;
+    stroke: #9d03ff;
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: e-stroke 4s 0.2s infinite ease-out;
+  }
+
+  @keyframes e-stroke {
+    50% {
+      stroke-dashoffset: 0;
+      stroke: #00abf4;
+    }
+
+    100% {
+      stroke-dashoffset: -200;
+      stroke: #fff;
+    }
+  }
+
+  .loader-t {
+    fill: none;
+    stroke: #9d03ff;
+    stroke-width: 2;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: t-stroke 4s 0.2s infinite ease-out;
+  }
+
+  @keyframes t-stroke {
+    50% {
+      stroke-dashoffset: 0;
+      stroke: #00abf4;
+    }
+
+    100% {
+      stroke-dashoffset: -200;
+      stroke: #fff;
+    }
+  }
+
+  .loader-r {
+    fill: none;
+    stroke: #9d03ff;
+    stroke-width: 2;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: r-stroke 4s 0.2s infinite ease-out;
+  }
+
+  @keyframes r-stroke {
+    50% {
+      stroke-dashoffset: 0;
+      stroke: #00abf4;
+    }
+
+    100% {
+      stroke-dashoffset: -150;
+      stroke: #fff;
+    }
+  }
+}
+.loader-copyright {
+  fill: none;
+  stroke: #9d03ff;
+  stroke-width: 2;
+  stroke-dasharray: 70;
+  stroke-dashoffset: 70;
+  animation: copyr-stroke 4s .2s infinite ease-out;
+}
+@keyframes copyr-stroke {
+  50% {
+    stroke-dashoffset: 0;
+    stroke: #00abf4;
+  }
+  100% {
+    stroke-dashoffset: -70;
+    stroke: #fff;
+  }
+}
+
+.spinoff {
+  // visibility: hidden;
+  animation: 4s alternate fade forwards;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  85% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
