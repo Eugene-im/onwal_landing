@@ -79,7 +79,6 @@ const Home = props => {
         <ContactUsSection />
         <Footer />
       </div>
-      <UpButton />
     </>
   );
 };
