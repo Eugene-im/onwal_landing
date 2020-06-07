@@ -193,6 +193,120 @@ const Home = props => {
             <button className="button">Trade Deho with OnWallet</button>
             <div className="background__circle_3"></div>
           </div>
+          <div className="fifth__screen">
+            <div className="content">
+              <h2 className="screen__title">
+                Rich Functionality
+              </h2>
+              <div className="screen_action">
+                <div className="action__item">
+                  <div className="action__item_img"></div>
+                  <div className="action__item_desc">
+                    <h3 className="action__item_title">On-spot. OnWallet. Locally, Internationally.</h3>
+
+                    <div className="action__item_description screen_description">The OnWallet payment gateway is instantaneous. With one tap, OnWallet lets you transfer/exchange FIAT or cryptocurrency anywhere, real-time with the best exchange rate and no extra fees. That’s fast, easy and cheap thanks to OnWallet’s accelerated mining.</div>
+                    <ul className="action__item_description__list">
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="background__circle_4"></div>
+                <div className="action__item">
+                  <div className="action__item_img"></div>
+                  <div className="action__item_desc">
+                    <h3 className="action__item_title">On-spot. OnWallet. Locally, Internationally.</h3>
+
+                    <div className="action__item_description screen_description">The OnWallet payment gateway is instantaneous. With one tap, OnWallet lets you transfer/exchange FIAT or cryptocurrency anywhere, real-time with the best exchange rate and no extra fees. That’s fast, easy and cheap thanks to OnWallet’s accelerated mining.</div>
+                    <ul className="action__item_description__list">
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="background__circle_5"></div>
+                <div className="action__item">
+                  <div className="action__item_img"></div>
+                  <div className="action__item_desc">
+                    <h3 className="action__item_title">On-spot. OnWallet. Locally, Internationally.</h3>
+
+                    <div className="action__item_description screen_description">The OnWallet payment gateway is instantaneous. With one tap, OnWallet lets you transfer/exchange FIAT or cryptocurrency anywhere, real-time with the best exchange rate and no extra fees. That’s fast, easy and cheap thanks to OnWallet’s accelerated mining.</div>
+                    <ul className="action__item_description__list">
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                      <li>
+                        <h4>Transfer</h4>
+                        <div>
+                          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="background__circle_6"></div>
+              </div>
+            </div>
+          </div>
         </main>
         <footer></footer>
       </div>
