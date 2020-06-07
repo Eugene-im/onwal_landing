@@ -87,24 +87,27 @@ const Home = props => {
                 </ul>
               </div>
             </header>
-            <div className="first__screen_cont">
-              <div className="screen__cont__action">
-                <h1 className="screen__cont_title">Crypto & Digital Wallet, Redefined.</h1>
-                <div className="drop">drop w'b here</div>
-                <div className="download__links">
-                  <div className="download__links_title">
-                    Get OnWallet for mobile
+            <div className="content">
+
+              <div className="first__screen_cont">
+                <div className="screen__cont__action">
+                  <h1 className="screen__cont_title">Crypto & Digital Wallet, Redefined.</h1>
+                  <div className="drop">drop w'b here</div>
+                  <div className="download__links">
+                    <div className="download__links_title">
+                      Get OnWallet for mobile
                   </div>
-                  <div className="download__links_bloc">
-                    <div className="download__links_qr"></div>
-                    <div className="download__links_market">
-                      <div className="download__links_apple"></div>
-                      <div className="download__links_google"></div>
+                    <div className="download__links_bloc">
+                      <div className="download__links_qr"></div>
+                      <div className="download__links_market">
+                        <div className="download__links_apple"></div>
+                        <div className="download__links_google"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div className="screen__cont__image"></div>
               </div>
-              <div className="screen__cont__image"></div>
             </div>
           </div>
           <div className="second__screen">
@@ -189,9 +192,9 @@ const Home = props => {
                   <div className="action__item_description">We operate anonymous and private using boundary based private ledger. With the hybrid-decentralized architecture, your ledger will not go public and it will remain private, locked using your own private key. Also, it runs on a smart block chain ledger that tracks the movement of the coin and registers it with OnWallet.</div>
                 </div>
               </div>
+              <button className="button">Trade Deho with OnWallet</button>
+              <div className="background__circle_3"></div>
             </div>
-            <button className="button">Trade Deho with OnWallet</button>
-            <div className="background__circle_3"></div>
           </div>
           <div className="fifth__screen">
             <div className="content">

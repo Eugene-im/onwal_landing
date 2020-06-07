@@ -13,7 +13,7 @@
  * is strictly forbidden unless prior written permission is obtained           *
  * from Nettr Group.                                                           *
  ******************************************************************************/
-// @import 'shared/styles/colors.scss';
+@import 'shared/styles/variables.scss';
 @import "shared/styles/mixins.scss";
 
 .first__screen {
@@ -27,10 +27,20 @@
     text-transform: lowercase;
     opacity: 1;
 }
-.content{
+.content {
     max-width: 1222px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
     box-sizing: border-box;
+}
+header {
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu {
+        display: flex;
+        color: $white0;
+    }
 }
