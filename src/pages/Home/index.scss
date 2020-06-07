@@ -13,7 +13,24 @@
  * is strictly forbidden unless prior written permission is obtained           *
  * from Nettr Group.                                                           *
  ******************************************************************************/
-@import 'shared/styles/colors.scss';
-@import 'shared/styles/mixins.scss';
+// @import 'shared/styles/colors.scss';
+@import "shared/styles/mixins.scss";
 
-
+.first__screen {
+    background: #2b56f5 0% 0% no-repeat padding-box;
+    min-height: 100vh;
+}
+.logo {
+    font: Bold 28px/32px Ubuntu;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: lowercase;
+    opacity: 1;
+}
+.content{
+    max-width: 1222px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
