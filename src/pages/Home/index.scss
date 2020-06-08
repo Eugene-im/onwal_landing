@@ -13,17 +13,19 @@
  * is strictly forbidden unless prior written permission is obtained           *
  * from Nettr Group.                                                           *
  ******************************************************************************/
-@import 'shared/styles/variables.scss';
+@import "shared/styles/variables.scss";
 @import "shared/styles/mixins.scss";
 
 .first__screen {
-    background: #2b56f5 0% 0% no-repeat padding-box;
+    background: $blue 0% 0% no-repeat padding-box;
     min-height: 100vh;
 }
 .logo {
-    font: Bold 28px/32px Ubuntu;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
     letter-spacing: 0px;
-    color: #ffffff;
+    color: $white0;
     text-transform: lowercase;
     opacity: 1;
 }
@@ -34,13 +36,653 @@
     padding: 0 15px;
     box-sizing: border-box;
 }
-header {
-    .content {
+.screen__title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 43px;
+    color: #002b40;
+    margin-bottom: 32px;
+}
+.screen_description {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    color: $black;
+    max-width: 784px;
+    width: 100%;
+    text-align: center;
+}
+.action__item_title {
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    color: $black;
+    margin-bottom: 16px;
+}
+.screen__page {
+    position: relative;
+    & > .content {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.screen_action {
+    position: relative;
+    width: 100%;
+}
+.btn {
+    width: 260px;
+    height: 44px;
+    background: $blue;
+    border-radius: 22px;
+    font-weight: 500;
+    color: $white0;
+    display: block;
+    cursor: pointer;
+    &:hover {
+        background: $yellow;
+    }
+    &:focus {
+        background: $orange;
+    }
+}
+main {
+    padding-bottom: 61px;
+}
+.menu {
+    color: $white0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    a {
+        color: inherit;
+    }
+}
+.first__screen {
+    color: $white0;
+    position: relative;
+    .content {
+        flex-direction: row;
+    }
+    header {
+        z-index: 2;
+        position: relative;
+        .content {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .menu {
+            max-width: 272px;
+        }
+    }
+    .first__screen_layer {
+        z-index: 2;
+        position: relative;
+    }
+    .first__screen_cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .background__figure_1 {
+        position: absolute;
+        z-index: 1;
+        top: -373.961914px;
+        left: 831px;
+        width: 1007px;
+        height: 942px;
+        transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+        background-color: #2448cc;
+        border-radius: 48px;
+    }
+    .background__figure_2 {
+        position: absolute;
+        z-index: 1;
+        top: 216px;
+        left: -658px;
+        width: 795px;
+        height: 795px;
+        transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+        border-radius: 48px;
+        background-color: #2448cc;
+    }
+    .screen__cont__action {
+        max-width: 376px;
+        width: 100%;
+    }
+    .screen__cont_title {
+        font-weight: 900;
+        font-size: 48px;
+        line-height: 58px;
+        margin-bottom: 25px;
+    }
+    .download__links_bloc {
+        display: flex;
+        justify-content: space-between;
+        max-width: 245px;
+        width: 100%;
+    }
+    .download__links_market {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .download__links_qr {
+        width: 94px;
+        height: 94px;
+        @include setBackgroundImage("../../assets/onw/Group\ 4968.svg");
+    }
+    .download__links_apple {
+        width: 135px;
+        height: 40px;
+        @include setBackgroundImage("../../assets/onw/Group\ 4977.svg");
+    }
+    .download__links_google {
+        width: 135px;
+        height: 40px;
+        @include setBackgroundImage("../../assets/onw/Group\ 4974.svg");
+    }
+    .screen__cont__image {
+        width: 968px;
+        height: 856px;
+        @include setBackgroundImage("../../assets/onw/phone-top-view-v2-1x@2x.png", contain);
+    }
+}
+
+.second__screen {
+    .background__figure_1 {
+        position: absolute;
+        top: 96px;
+        left: 75%;
+        z-index: 1;
+        width: 662px;
+        height: 417px;
+        background: url("../../assets/onw/Path\ 6012.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_2 {
+        position: absolute;
+        top: 512px;
+        left: -7.4%;
+        z-index: 1;
+        width: 662px;
+        height: 417px;
+        background: url("../../assets/onw/Path\ 6019.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_3 {
+        position: absolute;
+        top: 186px;
+        left: -7.08%;
+        z-index: 1;
+        width: 806px;
+        height: 574px;
+        background: url("../../assets/onw/NoPath - Copy (8).png") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_4 {
+        position: absolute;
+        top: 680px;
+        left: 41%;
+        z-index: 1;
+        width: 158px;
+        height: 96px;
+        background: url("../../assets/onw/Path\ 6014.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_5 {
+        position: absolute;
+        top: 678px;
+        left: 56.1%;
+        z-index: 1;
+        width: 767px;
+        height: 474px;
+        background: url("../../assets/onw/NoPath - Copy.png") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_6 {
+        position: absolute;
+        top: 1072px;
+        left: 46.92%;
+        z-index: 1;
+        width: 119px;
+        height: 114px;
+        background: url("../../assets/onw/Path\ 6017.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_7 {
+        position: absolute;
+        top: 1160px;
+        left: 5.26%;
+        z-index: 1;
+        width: 570px;
+        height: 390px;
+        background: url("../../assets/onw/NoPath - Copy (25).png") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_8 {
+        position: absolute;
+        top: 1481px;
+        left: 63.6%;
+        z-index: 1;
+        width: 418px;
+        height: 175px;
+        background: url("../../assets/onw/Path\ 6020.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__wave_1 {
+        position: absolute;
+        z-index: 2;
+        top: -130px;
+        width: 100%;
+        height: 133px;
+        @include setBackgroundImage("../../assets/onw/Path\ 5917.svg", contain);
+    }
+    .screen__title {
+        margin-top: 92px;
+        align-self: center;
+    }
+
+    .action__item {
+        position: relative;
+        max-width: 580px;
+        width: 100%;
+        z-index: 2;
+        &:nth-child(1) {
+            margin-top: 213px;
+            left: 35%;
+        }
+        &:nth-child(2) {
+            margin-top: 284px;
+            align-self: start;
+        }
+        &:nth-child(3) {
+            margin-top: 265px;
+            left: 35%;
+            margin-bottom: 220px;
+        }
+    }
+    .action__item_description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black;
+    }
+}
+.third__screen {
+    padding-bottom: 170px;
+    .btn {
+        margin: 72px auto 0;
+    }
+    .screen_description {
+        margin-bottom: 67px;
+    }
+    .content {
+        position: relative;
+        z-index: 2;
+    }
+    .block__fee {
+        width: 100%;
+        min-height: 160px;
+        background: $white0;
+        box-shadow: 0px 4px 32px #004d9926;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .fee__item {
+        max-width: 274px;
+        width: 100%;
+        height: 112px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .fee__item_val {
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 56px;
+        color: $blue;
+    }
+    .video__action_block {
+        height: 521px;
+        background-color: #cecece;
+        position: relative;
+        top: -80px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .background__for_video {
+        position: absolute;
+        z-index: 1;
+        width: 1920px;
+        height: 521px;
+        background: url("../../assets/onw/Group 5065@2x.png") 0% 0% no-repeat padding-box;
+    }
+    .button_play_video {
+        width: 86px;
+        height: 86px;
+        background: $white0;
+        box-shadow: 0px 4px 32px #004d9926;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 7px;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 16px 0 16px 25px;
+            border-color: transparent transparent transparent $blue;
+        }
+    }
+    .button_play_video_text {
+        position: relative;
+        z-index: 2;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 23px;
+        color: $white0;
+    }
+    .screen_action {
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .screen_description {
+            margin-bottom: 29px;
+        }
+    }
+}
+.foth__screen {
+    .background__figure_1 {
+        position: absolute;
+        top: 561px;
+        left: 18.85%;
+        z-index: 1;
+        width: 323px;
+        height: 294px;
+        background: url("../../assets/onw/NoPath - Copy (18).png") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_2 {
+        position: absolute;
+        top: 708px;
+        left: 5.72%;
+        z-index: 1;
+        width: 264px;
+        height: 216px;
+        background: url("../../assets/onw/Path\ 6022.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_3 {
+        position: absolute;
+        top: 846px;
+        left: 47.5%;
+        z-index: 1;
+        width: 96px;
+        height: 74px;
+        background: url("../../assets/onw/Path 6024.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_4 {
+        position: absolute;
+        top: 841px;
+        left: 63.43%;
+        z-index: 1;
+        width: 338px;
+        height: 312px;
+        background: url("../../assets/onw/NoPath - Copy (30).png") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_5 {
+        position: absolute;
+        top: 846px;
+        left: 79.4%;
+        z-index: 1;
+        width: 240px;
+        height: 250px;
+        transform: matrix(0.41, -0.91, 0.91, 0.41, 0, 0);
+        background: url("../../assets/onw/Path 6023.svg") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_6 {
+        position: absolute;
+        top: 1180px;
+        left: 14.74%;
+        z-index: 1;
+        width: 417px;
+        height: 319px;
+        background: url("../../assets/onw/NoPath - Copy (31).png") 0% 0% no-repeat padding-box;
+    }
+    .background__figure_7 {
+        position: absolute;
+        top: 1634px;
+        left: 46.14%;
+        z-index: 1;
+        width: 148px;
+        height: 169px;
+        background: url("../../assets/onw/Path 5918.svg") 0% 0% no-repeat padding-box;
+    }
+    .screen_action.first {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 329px;
+    }
+    .background__wave_2 {
+        position: relative;
+        width: 100%;
+        height: 231px;
+        background: url("../../assets/onw/Path 5935.svg") 0% 0% no-repeat padding-box;
+    }
+    .screen_action__img {
+        position: absolute;
+        top: 0;
+        width: 1249px;
+        height: 329px;
+        background: url("../../assets/onw/coins@2x.png") 0% 0% no-repeat;
+        background-size: contain;
+    }
+    .screen__title {
+        margin-bottom: 16px;
+    }
+    .screen_action.xxx {
+        .action__item {
+            position: relative;
+            max-width: 580px;
+            width: 100%;
+            z-index: 2;
+            &:nth-child(1) {
+                margin-top: 135px;
+                left: 35%;
+            }
+            &:nth-child(2) {
+                margin-top: 133px;
+                align-self: start;
+            }
+            &:nth-child(3) {
+                margin-top: 120px;
+                left: 35%;
+                margin-bottom: 58px;
+            }
+        }
+    }
+}
+.fifth__screen {
+    .content {
+        padding-top: 464px;
+    }
+    .screen__title {
+        margin-bottom: 92px;
+    }
+    .action__item {
+        display: flex;
+        align-items: center;
+        &.first .action__item_img {
+            .action__item_img_phone {
+                width: 309px;
+                height: 639px;
+                background: url("../../assets/onw/Group 5115.svg") 0% 0% no-repeat;
+                background-size: contain;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex: 1 0 50%;
+        }
+        .item__1 {
+            position: absolute;
+            width: 283px;
+            height: 614px;
+            background: transparent url("../../assets/onw/Wallets.png");
+            background-size: contain;
+        }
+    }
+    .action__item_desc {
+        max-width: 580px;
+        width: 100%;
+    }
+    .action__item_description__list {
+        margin-top: 48px;
+        li {
+            margin-bottom: 24px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 580px;
+            width: 100%;
+            padding: 16px 16px 16px 12px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0px 4px 16px #004d9926;
+                border-radius: 6px;
+            }
+        }
+        .item__description {
+            max-width: 476px;
+            width: 100%;
+        }
+        .item__img {
+            flex: 1 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+footer {
+    background-color: $blue;
+    position: relative;
+    color: $white0;
+    .background__wave_3 {
+        position: absolute;
+        top: -60px;
+        width: 100%;
+        height: 61px;
+        background: url("../../assets/onw/Path 5946.svg") 0% 0% no-repeat;
+    }
+    .content .fline,
+    .footer__text__privacy {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
     }
     .menu {
-        display: flex;
+        max-width: 164px;
+    }
+    .footer__text_section {
+        font-size: 12px;
+        line-height: 18px;
         color: $white0;
+        opacity: 0.75;
+    }
+    .footer__text__copyright,
+    .footer__text__privacy_policy {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .footer__text__copyright {
+        opacity: 0.75;
+    }
+    .footer__text__privacy_policy {
+        color: $white0;
+    }
+}
+.overflow {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #000;
+    color: $white0;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 16px;
+}
+
+i.icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    &.os {
+        width: 24px;
+        height: 24px;
+        &:hover {
+            filter: invert(66%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
+        }
+        &:focus {
+            filter: invert(59%) sepia(83%) saturate(1840%) hue-rotate(359deg) brightness(100%) contrast(106%);
+        }
+    }
+    &.ios {
+        background: url("../../assets/onw/Group 5073.svg") 0% 0% no-repeat;
+    }
+    &.macos {
+        background: url("../../assets/onw/Group 5072.svg") 0% 0% no-repeat;
+    }
+    &.android {
+        background: url("../../assets/onw/Group 5071.svg") 0% 0% no-repeat;
+    }
+    &.windows {
+        background: url("../../assets/onw/Group 5070.svg") 0% 0% no-repeat;
+    }
+    &.transfer {
+        background: url("../../assets/onw/Group 5164.svg") 0% 0% no-repeat;
+    }
+    &.recive {
+        background: url("../../assets/onw/Group 5157.svg") 0% 0% no-repeat;
+    }
+    &.exchange {
+        background: url("../../assets/onw/Group 5168.svg") 0% 0% no-repeat;
+    }
+    &.nfc {
+        background: url("../../assets/onw/Group 5150.svg") 0% 0% no-repeat;
+    }
+    &:hover {
+        filter: invert(66%) sepia(98%) saturate(1195%) hue-rotate(358deg) brightness(99%) contrast(106%);
+    }
+    &:focus {
+        filter: invert(59%) sepia(83%) saturate(1840%) hue-rotate(359deg) brightness(100%) contrast(106%);
+    }
+}
+@media (max-width: $tablet) {
+    .overflow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

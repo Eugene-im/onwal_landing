@@ -16,10 +16,10 @@
 
 // $pathDomain: 'https://ntcdn.azureedge.net/';
 
-@import 'fonts';
-@import 'shared/styles/variables.scss';
+@import "fonts";
+@import "shared/styles/variables.scss";
 
-html{
+html {
   scroll-behavior: smooth;
 }
 body {
@@ -45,7 +45,7 @@ a,
 p,
 body,
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -54,13 +54,17 @@ html {
 
 h1,
 h2,
-h3,
+h3 {
+  font-weight: 900;
+  margin: 0;
+}
 h4,
 h5,
 h6 {
-  font-weight: 900;
-}
+  font-weight: 500;
+  margin: 0;
 
+}
 a {
   text-decoration: none;
 }
@@ -77,6 +81,6 @@ button {
   box-sizing: border-box;
 }
 
-#rc-anchor-container{
+#rc-anchor-container {
   display: none;
 }
